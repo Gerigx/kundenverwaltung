@@ -11,6 +11,7 @@ import de.hsos.swa.Controller.KundenController;
 import de.hsos.swa.Entity.Kunde;
 import jakarta.annotation.PostConstruct;
 import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Inject;
 import jakarta.transaction.Transactional;
 import jakarta.ws.rs.Consumes;
@@ -20,6 +21,7 @@ import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 
+//@RequestScoped
 @ApplicationScoped
 @Path("/kunden")
 @Produces(MediaType.APPLICATION_JSON)

@@ -6,16 +6,16 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
-@Entity
-@Dependent
+//@Entity
+@Dependent // -> erbet den lebenszyklus
 public class Kunde {
 
-    @Id
-    @GeneratedValue
+    //@Id
+    //@GeneratedValue
     private long id;
     private String vorname;
     private String nachname;
-    @Embedded
+    //@Embedded
     private Adresse adresse;
 
     public Kunde() {
@@ -52,6 +52,10 @@ public class Kunde {
 
     public long getId() {
         return id;
+    }
+
+    public void setId(long id){
+        this.id = id;
     }
 
     @Override
