@@ -1,8 +1,13 @@
 package de.hsos.swa.Entity;
 
+import jakarta.enterprise.context.Dependent;
+import jakarta.persistence.Embedded;
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
+@Entity
+@Dependent
 public class Kunde {
 
     @Id
@@ -10,6 +15,7 @@ public class Kunde {
     private long id;
     private String vorname;
     private String nachname;
+    @Embedded
     private Adresse adresse;
 
     public Kunde() {

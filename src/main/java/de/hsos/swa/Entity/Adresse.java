@@ -1,5 +1,8 @@
 package de.hsos.swa.Entity;
 
+import jakarta.persistence.Embeddable;
+
+@Embeddable
 public class Adresse {
 
     private String plz;
