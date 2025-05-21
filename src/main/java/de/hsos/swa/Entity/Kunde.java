@@ -1,21 +1,23 @@
 package de.hsos.swa.Entity;
 
 import jakarta.enterprise.context.Dependent;
+import jakarta.enterprise.inject.Vetoed;
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
-//@Entity
-@Dependent // -> erbet den lebenszyklus
+@Vetoed
+@Entity
+//@Dependent // -> erbet den lebenszyklus
 public class Kunde {
 
-    //@Id
-    //@GeneratedValue
+    @Id
+    @GeneratedValue
     private long id;
     private String vorname;
     private String nachname;
-    //@Embedded
+    @Embedded
     private Adresse adresse;
 
     public Kunde() {
